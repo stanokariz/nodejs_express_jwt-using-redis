@@ -1,0 +1,38 @@
+GET http://localhost:5000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MzMzMjk1OTcsImV4cCI6MTczMzMyOTYxNywiYXVkIjoiNjc1MDgyOTk1MGNhMzM0YWE4NGFjYzIwIiwiaXNzIjoiZ29vZ2xlLmNvbSJ9.MYN3iRwRxVWy7EVgqsTkxyi-kx6OZheaBBabs-VM73Q
+
+
+### LOGIN ROUTE
+POST  http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "email": "tom@mail.com",
+    "password": "1234"
+}
+
+
+### REGISTER ROUTE
+POST  http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "email": "tom@mail.com",
+    "password": "1234"
+}
+
+### REFRESH TOKEN ROUTE
+POST  http://localhost:5000/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MzMzMzU1MDYsImV4cCI6MTc2NDg5MzEwNiwiYXVkIjoiNjc1MDg0MGZiMmM2Nzk5OWU0YTFmYTM4IiwiaXNzIjoiZ29vZ2xlLmNvbSJ9.4Z8edlaSRxF4qLNb_-49N1xA_71gl5JXYVUV0DVchzk"
+}
+
+### LOGOUT ROUTE
+DELETE  http://localhost:5000/auth/logout
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MzMzMzMwODAsImV4cCI6MTc2NDg5MDY4MCwiYXVkIjoiNjc1MDg0MGZiMmM2Nzk5OWU0YTFmYTM4IiwiaXNzIjoiZ29vZ2xlLmNvbSJ9.qnBBaIr18rCg4UZg84lsR062a7dziVYcBrijVR2eexM"
+}
